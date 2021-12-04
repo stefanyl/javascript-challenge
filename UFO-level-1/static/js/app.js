@@ -20,7 +20,7 @@ then adds new rows of data for each UFO sighting */
 var tbody = d3.select("tbody");
 
 //Cosole.log the ufo data
-console.log(data);
+//console.log(data);
 
 //Build table
 //function buildTable(data)
@@ -41,16 +41,7 @@ function buildTable(data) {
 }
 /* Have a column for date/time, city, state, country, shape, and comment */
 
-// Building table function 
-// d3.event.preventDefault();
-
-    // var dateField = d3.select("#datetime");
-    // var cityField = d3.select("#city");
-    // var stateField = d3.select("#state");
-
-    // var dateValue = dateField.property("value");
-    // var cityValue = cityField.property("value");
-    // var stateValue = stateField.property("value");
+// No need to list individual columns because the data section already includes them
 // Click function
 function handleClick() {
     console.log("A button was clicked")
@@ -59,7 +50,9 @@ function handleClick() {
     // Datetime
     var date = d3.select("#datetime").property("value");
     let filteredData = tableData;
-  
+
+/* Use a date form in your HTML document and write JavaScript code that will 
+listen for events and search through the date/time column to find rows that match user input */  
     // Filter
     if (date) {
       filteredData = filteredData.filter(row => row.datetime === date);
@@ -68,7 +61,7 @@ function handleClick() {
     buildTable(filteredData);
   }
   
-  // Filter using button
+  // Filter using filter table button
   d3.selectAll("#filter-btn").on("click", handleClick);
   
   // Build Table
@@ -79,5 +72,4 @@ function handleClick() {
 
 
 
-/* Use a date form in your HTML document and write JavaScript code that will 
-listen for events and search through the date/time column to find rows that match user input */
+
